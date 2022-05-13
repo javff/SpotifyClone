@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "Apps">
+      <FileRef
+         location = "group:../../practice/SpotifyApp/SpotifyApp.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Features">
+      <Group
+         location = "container:"
+         name = "Home">
+         <FileRef
+            location = "group:../../practice/HomeUI">
+         </FileRef>
+         <FileRef
+            location = "group:../../practice/HomeKit">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Onboarding">
+         <FileRef
+            location = "group:../../practice/OnboardingUI">
+         </FileRef>
+         <FileRef
+            location = "group:../../practice/OnboardingKit">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Libraries">
+   </Group>
+</Workspace>
