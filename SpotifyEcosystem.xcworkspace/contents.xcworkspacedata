@@ -4,9 +4,55 @@
    <Group
       location = "container:"
       name = "Apps">
-      <FileRef
-         location = "group:../../practice/SpotifyApp/SpotifyApp.xcodeproj">
-      </FileRef>
+      <Group
+         location = "group:SpotifyApp"
+         name = "SpotifyApp">
+         <FileRef
+            location = "group:SpotifyApp.xcodeproj">
+         </FileRef>
+         <Group
+            location = "group:SpotifyApp"
+            name = "SpotifyApp">
+            <FileRef
+               location = "group:SpotifyAppApp.swift">
+            </FileRef>
+            <Group
+               location = "group:Assets.xcassets"
+               name = "Assets.xcassets">
+               <Group
+                  location = "group:AppIcon.appiconset"
+                  name = "AppIcon.appiconset">
+                  <FileRef
+                     location = "group:Contents.json">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:AccentColor.colorset"
+                  name = "AccentColor.colorset">
+                  <FileRef
+                     location = "group:Contents.json">
+                  </FileRef>
+               </Group>
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Preview Content"
+               name = "Preview Content">
+               <Group
+                  location = "group:Preview Assets.xcassets"
+                  name = "Preview Assets.xcassets">
+                  <FileRef
+                     location = "group:Contents.json">
+                  </FileRef>
+               </Group>
+            </Group>
+            <FileRef
+               location = "group:ContentView.swift">
+            </FileRef>
+         </Group>
+      </Group>
    </Group>
    <Group
       location = "container:"
@@ -15,20 +61,20 @@
          location = "container:"
          name = "Home">
          <FileRef
-            location = "group:../../practice/HomeUI">
+            location = "group:HomeKit">
          </FileRef>
          <FileRef
-            location = "group:../../practice/HomeKit">
+            location = "group:HomeUI">
          </FileRef>
       </Group>
       <Group
          location = "container:"
          name = "Onboarding">
          <FileRef
-            location = "group:../../practice/OnboardingUI">
+            location = "group:OnboardingKit">
          </FileRef>
          <FileRef
-            location = "group:../../practice/OnboardingKit">
+            location = "group:OnboardingUI">
          </FileRef>
       </Group>
    </Group>
