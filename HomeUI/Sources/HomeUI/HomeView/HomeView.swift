@@ -6,12 +6,23 @@
 //
 
 import SwiftUI
+import SPHomeKit
 
 public struct HomeView: View {
+
+    private let gridFactory: GridFactory
+    @StateObject var viewModel: HomeViewModel
+
     public var body: some View {
-        VStack {
-            RecomendationSectionView()
-            Spacer()
+        ScrollView {
+            LazyVStack {
+                ForEach(viewModel.sections, id: \.identifier.id) {
+                    gridFactory.makeSection($0)
+                }
+                Spacer()
+            }
+        }.task {
+            viewModel.fetchGrid()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(
@@ -29,12 +40,15 @@ public struct HomeView: View {
             )
     }
 
-    public init() {}
-
+    public init(gridFactory: GridFactory, viewModel: HomeViewModel) {
+        self.gridFactory = gridFactory
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
 }
 
 struct SwiftUIView_Previews: PreviewProvider {
+
     static var previews: some View {
-        HomeView()
+        HomeView(gridFactory: FakeGridFactoryImpl(), viewModel: HomeViewModel(repository: FakeHomeRepository()))
     }
 }

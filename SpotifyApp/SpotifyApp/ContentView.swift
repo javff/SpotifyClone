@@ -7,10 +7,11 @@
 
 import SwiftUI
 import HomeUI
+import SPHomeKit
 
 struct ContentView: View {
     var body: some View {
-        HomeView()
+        HomeView(gridFactory: FakeGridFactoryImpl(), viewModel: HomeViewModel(repository: FakeHomeRepository()))
     }
 
 }

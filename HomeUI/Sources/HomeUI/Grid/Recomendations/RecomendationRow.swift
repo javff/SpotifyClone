@@ -6,16 +6,20 @@
 //
 
 import SwiftUI
+import SPHomeKit
 
 struct RecomendationRowView: View {
+
+    @StateObject var viewModel: RecomendationRowViewModel
+
     var body: some View {
         HStack {
             VStack {
 
             }
-            .frame(maxWidth: 62, maxHeight: 62)
+            .frame(width: 62, height: 62)
             .background(Color.red)
-            Text("Lorem")
+            Text(viewModel.text)
                 .bold()
                 .foregroundColor(.white)
             Spacer()
@@ -27,6 +31,6 @@ struct RecomendationRowView: View {
 
 struct RecomendationRowView_Previews: PreviewProvider {
     static var previews: some View {
-        RecomendationRowView()
+        RecomendationRowView(viewModel: .init(text: "hola"))
     }
 }

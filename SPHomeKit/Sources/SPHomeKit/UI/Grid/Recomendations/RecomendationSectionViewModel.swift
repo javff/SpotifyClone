@@ -6,18 +6,29 @@
 //
 
 import Combine
+import Foundation
+
+public struct RecomendationModel {
+    public let title: String
+
+    public init(title: String) {
+        self.title = title
+    }
+}
+
+public struct RecomendationsModel: GridSectionModel {
+    public let results: [RecomendationModel]
+
+    public init(results: [RecomendationModel]) {
+        self.results = results
+    }
+}
 
 public final class RecomendationSectionViewModel: ObservableObject {
-    @Published public var recomendations: [RecomendationRowViewModel] = [
-        RecomendationRowViewModel(text: "Canción 1"),
-        RecomendationRowViewModel(text: "Canción 2"),
-        RecomendationRowViewModel(text: "Canción 3"),
-        RecomendationRowViewModel(text: "Canción 4"),
-        RecomendationRowViewModel(text: "Canción 5"),
-        RecomendationRowViewModel(text: "Canción 6")
-    ]
 
-    public init() {
-        
+    @Published public var recomendations: [RecomendationRowViewModel] = []
+
+    public init(model: RecomendationsModel) {
+        recomendations = model.results.map { RecomendationRowViewModel(text: $0.title) }
     }
 }

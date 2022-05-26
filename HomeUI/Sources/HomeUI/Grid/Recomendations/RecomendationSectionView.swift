@@ -10,16 +10,17 @@ import SPHomeKit
 
 struct RecomendationSectionView: View {
 
-    var viewModel = RecomendationSectionViewModel()
+    @StateObject var viewModel: RecomendationSectionViewModel
+    var gridItemLayout = [GridItem(.flexible(maximum: .infinity)), GridItem(.flexible())]
+
     var body: some View {
         VStack(alignment: .leading) {
             Text("Good Evening")
                 .foregroundColor(.white)
                 .bold()
-            ForEach(0..<3) {_ in
-                HStack(spacing: 5) {
-                    RecomendationRowView()
-                    RecomendationRowView()
+            LazyVGrid(columns: gridItemLayout) {
+                ForEach(viewModel.recomendations, id: \.self) { viewModel in
+                    RecomendationRowView(viewModel: viewModel)
                 }
             }
         }
@@ -29,7 +30,20 @@ struct RecomendationSectionView: View {
 
 struct RecomendationSectionView_Previews: PreviewProvider {
     static var previews: some View {
-        RecomendationSectionView()
+        RecomendationSectionView(
+            viewModel: RecomendationSectionViewModel(
+                model: RecomendationsModel(
+                    results: [.init(title: "hola"),
+                              .init(title: "hola2"),
+                              .init(title: "hola3"),
+                              .init(title: "hola4"),
+                              .init(title: "hola5"),
+                              .init(title: "hola6"),
+                              .init(title: "hola7")
+                            ]
+                )
+            )
+        )
             .background(Color.black)
     }
 }
