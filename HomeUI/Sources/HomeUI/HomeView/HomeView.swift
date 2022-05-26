@@ -10,8 +10,8 @@ import SwiftUI
 public struct HomeView: View {
     public var body: some View {
         VStack {
-            Text("Hello mundo")
-                .foregroundColor(.white)
+            RecomendationSectionView()
+            Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(

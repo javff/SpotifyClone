@@ -61,10 +61,10 @@
          location = "container:"
          name = "Home">
          <FileRef
-            location = "group:HomeKit">
+            location = "group:HomeUI">
          </FileRef>
          <FileRef
-            location = "group:HomeUI">
+            location = "group:SPHomeKit">
          </FileRef>
       </Group>
       <Group

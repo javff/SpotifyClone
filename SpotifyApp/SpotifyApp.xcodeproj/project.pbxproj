@@ -7,13 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8F7F2D96282EC37300D329B3 /* HomeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8F7F2D95282EC37300D329B3 /* HomeUI */; };
-		8F7F2D98282EC41000D329B3 /* OnboardingUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8F7F2D97282EC41000D329B3 /* OnboardingUI */; };
-		8F7F2D99282EC41000D329B3 /* OnboardingUI in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 8F7F2D97282EC41000D329B3 /* OnboardingUI */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		8FB1551D282EBD9600228A6E /* SpotifyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB1551C282EBD9600228A6E /* SpotifyAppApp.swift */; };
 		8FB1551F282EBD9600228A6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB1551E282EBD9600228A6E /* ContentView.swift */; };
 		8FB15521282EBD9700228A6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FB15520282EBD9700228A6E /* Assets.xcassets */; };
 		8FB15524282EBD9700228A6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FB15523282EBD9700228A6E /* Preview Assets.xcassets */; };
+		8FD06883283F6D7700293B1A /* HomeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8FD06882283F6D7700293B1A /* HomeUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +21,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8F7F2D99282EC41000D329B3 /* OnboardingUI in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,8 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F7F2D96282EC37300D329B3 /* HomeUI in Frameworks */,
-				8F7F2D98282EC41000D329B3 /* OnboardingUI in Frameworks */,
+				8FD06883283F6D7700293B1A /* HomeUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,9 +54,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8FB09C98283F7651009F383E /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		8FB15510282EBD9600228A6E = {
 			isa = PBXGroup;
 			children = (
+				8FB09C98283F7651009F383E /* Packages */,
 				8FB1551B282EBD9600228A6E /* SpotifyApp */,
 				8FB1551A282EBD9600228A6E /* Products */,
 				8F7F2D92282EC37000D329B3 /* Frameworks */,
@@ -112,8 +116,7 @@
 			);
 			name = SpotifyApp;
 			packageProductDependencies = (
-				8F7F2D95282EC37300D329B3 /* HomeUI */,
-				8F7F2D97282EC41000D329B3 /* OnboardingUI */,
+				8FD06882283F6D7700293B1A /* HomeUI */,
 			);
 			productName = SpotifyApp;
 			productReference = 8FB15519282EBD9600228A6E /* SpotifyApp.app */;
@@ -375,13 +378,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8F7F2D95282EC37300D329B3 /* HomeUI */ = {
+		8FD06882283F6D7700293B1A /* HomeUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = HomeUI;
-		};
-		8F7F2D97282EC41000D329B3 /* OnboardingUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = OnboardingUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

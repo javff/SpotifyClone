@@ -6,11 +6,16 @@
 //
 
 import SwiftUI
+import SPHomeKit
 
 struct RecomendationSectionView: View {
+
+    var viewModel = RecomendationSectionViewModel()
     var body: some View {
         VStack(alignment: .leading) {
             Text("Good Evening")
+                .foregroundColor(.white)
+                .bold()
             ForEach(0..<3) {_ in
                 HStack(spacing: 5) {
                     RecomendationRowView()
@@ -25,5 +30,6 @@ struct RecomendationSectionView: View {
 struct RecomendationSectionView_Previews: PreviewProvider {
     static var previews: some View {
         RecomendationSectionView()
+            .background(Color.black)
     }
 }
