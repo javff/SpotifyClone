@@ -24,25 +24,28 @@ public struct HomeView: View {
         }.task {
             viewModel.fetchGrid()
         }
+        .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(
-                LinearGradient(
-                    gradient: Gradient(
-                        colors: [
-                                 Color(hex: "3A9BBC"),
-                                 .black,
-                                 .black,
-                                 .black
-                              ]),
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                )
-            )
+        .background(gradientView())
     }
 
     public init(gridFactory: GridFactory, viewModel: HomeViewModel) {
         self.gridFactory = gridFactory
         _viewModel = StateObject(wrappedValue: viewModel)
+    }
+
+    fileprivate func gradientView() -> LinearGradient {
+        return LinearGradient(
+            gradient: Gradient(
+                colors: [
+                    Color(hex: "3A9BBC"),
+                    .black,
+                    .black,
+                    .black
+                ]),
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
+        )
     }
 }
 

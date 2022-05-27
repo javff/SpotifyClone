@@ -25,12 +25,14 @@ struct RecomendationRowView: View {
             Spacer()
         }
         .frame(maxWidth: .infinity)
-        .background(Color.black.opacity(0.4))
+        .background(Color(hex: "323232"))
+        .cornerRadius(4.25)
     }
 }
 
 struct RecomendationRowView_Previews: PreviewProvider {
     static var previews: some View {
-        RecomendationRowView(viewModel: .init(text: "hola"))
+        RecomendationRowView(viewModel: .init(text: "Lorem it sum"))
+            .padding()
     }
 }
