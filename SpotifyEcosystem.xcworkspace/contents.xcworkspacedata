@@ -81,5 +81,8 @@
    <Group
       location = "container:"
       name = "Libraries">
+      <FileRef
+         location = "group:../../practice/SPNetwork">
+      </FileRef>
    </Group>
 </Workspace>
