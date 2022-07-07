@@ -61,10 +61,10 @@
          location = "container:"
          name = "Home">
          <FileRef
-            location = "group:HomeUI">
+            location = "group:SPHomeKit">
          </FileRef>
          <FileRef
-            location = "group:SPHomeKit">
+            location = "group:HomeUI">
          </FileRef>
       </Group>
       <Group
@@ -80,9 +80,16 @@
    </Group>
    <Group
       location = "container:"
+      name = "Core">
+      <FileRef
+         location = "group:SPNetwork">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
       name = "Libraries">
       <FileRef
-         location = "group:../../practice/SPNetwork">
+         location = "group:../JKNetwork">
       </FileRef>
    </Group>
 </Workspace>

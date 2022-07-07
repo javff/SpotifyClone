@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F92067828757D7600F85CD9 /* HomeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8F92067728757D7600F85CD9 /* HomeUI */; };
 		8FB1551D282EBD9600228A6E /* SpotifyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB1551C282EBD9600228A6E /* SpotifyAppApp.swift */; };
 		8FB1551F282EBD9600228A6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB1551E282EBD9600228A6E /* ContentView.swift */; };
 		8FB15521282EBD9700228A6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FB15520282EBD9700228A6E /* Assets.xcassets */; };
 		8FB15524282EBD9700228A6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FB15523282EBD9700228A6E /* Preview Assets.xcassets */; };
-		8FD06883283F6D7700293B1A /* HomeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8FD06882283F6D7700293B1A /* HomeUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8F920674287579DC00F85CD9 /* SPNetwork */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SPNetwork; path = ../../../practice/SPNetwork; sourceTree = "<group>"; };
+		8F92067628757D6D00F85CD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8FB15519282EBD9600228A6E /* SpotifyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FB1551C282EBD9600228A6E /* SpotifyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAppApp.swift; sourceTree = "<group>"; };
 		8FB1551E282EBD9600228A6E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FD06883283F6D7700293B1A /* HomeUI in Frameworks */,
+				8F92067828757D7600F85CD9 /* HomeUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +59,7 @@
 		8FB09C98283F7651009F383E /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				8F920674287579DC00F85CD9 /* SPNetwork */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -82,6 +85,7 @@
 		8FB1551B282EBD9600228A6E /* SpotifyApp */ = {
 			isa = PBXGroup;
 			children = (
+				8F92067628757D6D00F85CD9 /* Info.plist */,
 				8FB1551C282EBD9600228A6E /* SpotifyAppApp.swift */,
 				8FB1551E282EBD9600228A6E /* ContentView.swift */,
 				8FB15520282EBD9700228A6E /* Assets.xcassets */,
@@ -116,7 +120,7 @@
 			);
 			name = SpotifyApp;
 			packageProductDependencies = (
-				8FD06882283F6D7700293B1A /* HomeUI */,
+				8F92067728757D7600F85CD9 /* HomeUI */,
 			);
 			productName = SpotifyApp;
 			productReference = 8FB15519282EBD9600228A6E /* SpotifyApp.app */;
@@ -305,6 +309,7 @@
 				DEVELOPMENT_TEAM = WLKF7773X4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpotifyApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -335,6 +340,7 @@
 				DEVELOPMENT_TEAM = WLKF7773X4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpotifyApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -378,7 +384,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8FD06882283F6D7700293B1A /* HomeUI */ = {
+		8F92067728757D7600F85CD9 /* HomeUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = HomeUI;
 		};
